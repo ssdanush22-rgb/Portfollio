@@ -13,7 +13,7 @@ export default function Header() {
           <div className="logo-icon">
             <Code2 size={20} />
           </div>
-          <span>Deepak G</span>
+          <span>Danush S S</span>
         </div>
 
         {/* Desktop Navigation */}

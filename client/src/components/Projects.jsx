@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import API_URL from "../api";
 import { ExternalLink, Github, Trash2, Code, Sparkles } from 'lucide-react';
 
-const singleDeepakProject = [
+const singleDanushProject = [
   {
     id: 1,
     title: "IoT Smart Home Automation System",
@@ -13,13 +13,13 @@ const singleDeepakProject = [
       "ESP8266, Arduino IoT Cloud, Google Assistant, C++",
     image_url:
       "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-    demo_url: "https://github.com/Deepak-Desanta",
-    github_url: "https://github.com/Deepak-Desanta"
+    demo_url: "https://github.com/ssdanush22-rgb",
+    github_url: "https://github.com/ssdanush22-rgb"
   }
 ];
 
 export default function Projects({ refreshTrigger, onOpenAddModal }) {
-  const [projects, setProjects] = useState(singleDeepakProject);
+  const [projects, setProjects] = useState(singleDanushProject);
   const [category, setCategory] = useState('All');
 
   const fetchProjects = (cat) => {
@@ -186,7 +186,7 @@ export default function Projects({ refreshTrigger, onOpenAddModal }) {
                     <a
                       href={
                         proj.demo_url ||
-                        'https://github.com/Deepak-Desanta'
+                        'https://github.com/ssdanush22-rgb'
                       }
                       target="_blank"
                       rel="noreferrer"
@@ -199,7 +199,7 @@ export default function Projects({ refreshTrigger, onOpenAddModal }) {
                     <a
                       href={
                         proj.github_url ||
-                        'https://github.com/Deepak-Desanta'
+                        'https://github.com/ssdanush22-rgb'
                       }
                       target="_blank"
                       rel="noreferrer"

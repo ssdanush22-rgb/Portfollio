@@ -52,8 +52,8 @@ db.serialize(() => {
     )
   `);
 
-  // Seed Deepak's exact IoT project
-  console.log('Seeding Deepak\'s IoT Smart Home Automation project...');
+  // Seed Danush's exact IoT project
+  console.log('Seeding Danush\'s IoT Smart Home Automation project...');
   const stmtProj = db.prepare(`
     INSERT INTO projects (title, description, category, technologies, image_url, demo_url, github_url)
     VALUES (?, ?, ?, ?, ?, ?, ?)
@@ -65,8 +65,8 @@ db.serialize(() => {
     "IoT / Hardware",
     "ESP8266, Arduino IoT Cloud, Google Assistant, C++",
     "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-    "https://github.com/Deepak-Desanta",
-    "https://github.com/Deepak-Desanta"
+    "https://github.com/ssdanush22-rgb",
+    "https://github.com/ssdanush22-rgb"
   ]);
   stmtProj.finalize();
 
@@ -77,7 +77,7 @@ db.serialize(() => {
     VALUES (?, ?, ?, ?)
   `);
 
-  const deepakSkills = [
+  const danushSkills = [
     // Programming Languages
     ["C++", "Programming Languages", 90, "code"],
     ["JavaScript", "Programming Languages", 92, "code"],
@@ -111,7 +111,7 @@ db.serialize(() => {
     ["VS Code", "Development Tools", 95, "terminal"]
   ];
 
-  for (const skill of deepakSkills) {
+  for (const skill of danushSkills) {
     stmtSkill.run(skill);
   }
   stmtSkill.finalize();

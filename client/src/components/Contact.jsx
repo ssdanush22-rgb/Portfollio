@@ -57,7 +57,7 @@ export default function Contact() {
 
         <div className="contact-grid">
           <div className="contact-info glass-panel">
-            <h3> DEEPAK G</h3>
+            <h3> DANUSH S S</h3>
             <p>Final-year Software Developer passionate about building modern web applications, designing intuitive user interfaces, and exploring creative technologies. </p>
 
             <div className="info-list">
@@ -65,7 +65,7 @@ export default function Contact() {
                 <div className="info-icon"><Mail size={20} /></div>
                 <div>
                   <span className="info-label">Email</span>
-                  <a href="mailto:deepakgnanavel21@gmail.com" className="info-value">deepakgnanavel21@gmail.com</a>
+                  <a href="mailto:danush@example.com" className="info-value">danush@example.com</a>
                 </div>
               </div>
 
@@ -142,7 +142,7 @@ export default function Contact() {
                 name="message" 
                 rows="4" 
                 required 
-                placeholder="Hi Deepak, I would like to discuss a project..." 
+                placeholder="Hi Danush, I would like to discuss a project..." 
                 value={formData.message} 
                 onChange={handleChange}
               ></textarea>

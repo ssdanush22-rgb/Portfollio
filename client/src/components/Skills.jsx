@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import API_URL from "../api";
 import { Layers, CheckCircle2 } from 'lucide-react';
 
-const deepakSkillsData = [
+const danushSkillsData = [
   // Programming Languages
   { id: 1, name: "C++", category: "Programming Languages" },
   { id: 2, name: "JavaScript", category: "Programming Languages" },
@@ -37,7 +37,7 @@ const deepakSkillsData = [
 ];
 
 export default function Skills() {
-  const [skills, setSkills] = useState(deepakSkillsData);
+  const [skills, setSkills] = useState(danushSkillsData);
   const [activeCategory, setActiveCategory] = useState('All');
 
   useEffect(() => {

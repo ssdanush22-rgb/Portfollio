@@ -95,7 +95,7 @@ app.delete('/api/projects/:id', (req, res) => {
 
 // GET /api/skills - Retrieve technical skills
 app.get('/api/skills', (req, res) => {
-  const deepakSkills = [
+  const danushSkills = [
     ["C++", "Programming Languages", 90, "code"],
     ["JavaScript", "Programming Languages", 92, "code"],
     ["HTML5", "Programming Languages", 95, "code"],
@@ -127,7 +127,7 @@ app.get('/api/skills', (req, res) => {
   db.serialize(() => {
     db.run('DELETE FROM skills');
     const stmt = db.prepare('INSERT INTO skills (name, category, level, icon) VALUES (?, ?, ?, ?)');
-    for (const item of deepakSkills) {
+    for (const item of danushSkills) {
       stmt.run(item);
     }
     stmt.finalize(() => {

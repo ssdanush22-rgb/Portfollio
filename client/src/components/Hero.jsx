@@ -10,7 +10,7 @@ export default function Hero() {
             <Sparkles size={14} /> Final Year Software Engineer
           </div>
           <h1 className="hero-title">
-            Hi, I'm <span className="gradient-text"> Deepak</span> 
+            Hi, I'm <span className="gradient-text"> Danush S S</span> 
           </h1>
           <p className="hero-subtitle">
             Final-year Software Developer and UI Designer passionate about building modern web applications,
@@ -27,13 +27,13 @@ export default function Hero() {
           </div>
 
           <div className="social-links">
-            <a href="https://github.com/Deepak-Desanta" target="_blank" rel="noreferrer" title="GitHub">
+            <a href="https://github.com/ssdanush22-rgb" target="_blank" rel="noreferrer" title="GitHub">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/deepak-g-787aa9330?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/ssdanush22" target="_blank" rel="noreferrer" title="LinkedIn">
               <Linkedin size={20} />
             </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakgnanavel21@gmail.com" title="Email">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ssdanush22@gmail.com" title="Email">
               <Mail size={20} />
             </a>
           </div>
@@ -43,7 +43,7 @@ export default function Hero() {
           <div className="avatar-frame glass-panel">
             <img 
               src={profile}
-              alt="Deepak Profile" 
+              alt="Danush S S Profile" 
               className="avatar-img"
             />
             <div className="floating-badge tech-badge-1 glass-panel">

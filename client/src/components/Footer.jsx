@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="footer-left">
           <div className="logo">
             <Code2 size={20} className="accent-icon" />
-            <span className="logo-text">Deepak <span className="gradient-text">G</span></span>
+            <span className="logo-text">Danush <span className="gradient-text">S S</span></span>
           </div>
-          <p>© {new Date().getFullYear()} Deepak. Built with React, Express, and SQLite.</p>
+          <p>© {new Date().getFullYear()} Danush S S. Built with React, Express, and SQLite.</p>
         </div>
 
         {/*<div className="footer-right">
