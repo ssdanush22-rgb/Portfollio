@@ -65,7 +65,7 @@ export default function Contact() {
                 <div className="info-icon"><Mail size={20} /></div>
                 <div>
                   <span className="info-label">Email</span>
-                  <a href="mailto:danush@example.com" className="info-value">danush@example.com</a>
+                  <a href="mailto:ssdanush22@gmail.com" className="info-value">ssdanush22@gmail.com</a>
                 </div>
               </div>
 
