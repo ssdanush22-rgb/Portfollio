@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Github, Linkedin, Mail, Download, Sparkles } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, Sparkles, Twitter } from 'lucide-react';
 import profile from "../assets/PFP.png";
 export default function Hero() {
   return (
@@ -30,8 +30,11 @@ export default function Hero() {
             <a href="https://github.com/ssdanush22-rgb" target="_blank" rel="noreferrer" title="GitHub">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/ssdanush22" target="_blank" rel="noreferrer" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/s-s-danush-b2348b276/" target="_blank" rel="noreferrer" title="LinkedIn">
               <Linkedin size={20} />
+            </a>
+            <a href="https://x.com/SSDanush189491" target="_blank" rel="noreferrer" title="Twitter / X">
+              <Twitter size={20} />
             </a>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ssdanush22@gmail.com" title="Email">
               <Mail size={20} />
