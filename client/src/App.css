@@ -168,13 +168,15 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-color);
   color: var(--text-muted);
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .social-links a:hover {
   color: var(--accent-secondary);
   border-color: var(--accent-primary);
-  transform: translateY(-2px);
+  background: rgba(99, 102, 241, 0.15);
+  transform: translateY(-4px) scale(1.1) rotate(4deg);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
 }
 
 .hero-visual {
@@ -189,6 +191,26 @@
   border-radius: 30px;
   max-width: 380px;
   width: 100%;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.25);
+  transition: all 0.4s ease;
+}
+
+.avatar-frame::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(168, 85, 247, 0.4), rgba(6, 182, 212, 0.5));
+  z-index: -1;
+  opacity: 0.6;
+  filter: blur(10px);
+  transition: opacity 0.4s ease;
+}
+
+.avatar-frame:hover::before {
+  opacity: 1;
+  filter: blur(16px);
 }
 
 .avatar-img {
@@ -197,6 +219,11 @@
   object-fit: cover;
   border-radius: 20px;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.avatar-frame:hover .avatar-img {
+  transform: scale(1.02);
 }
 
 .floating-badge {
@@ -208,16 +235,28 @@
   align-items: center;
   gap: 8px;
   box-shadow: var(--shadow-glow);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
 }
 
 .tech-badge-1 {
   top: 30px;
   left: -20px;
+  animation: floatBadge1 5s ease-in-out infinite;
 }
 
 .tech-badge-2 {
   bottom: 40px;
   right: -20px;
+  animation: floatBadge2 6s ease-in-out infinite 0.5s;
+}
+
+.floating-badge:hover {
+  transform: scale(1.08);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
 }
 
 .badge-dot {
@@ -225,6 +264,7 @@
   height: 8px;
   border-radius: 50%;
   background: var(--accent-secondary);
+  animation: pulseDot 2s infinite;
 }
 
 /* Stats Section */
@@ -241,24 +281,51 @@
 
 .stat-item {
   text-align: center;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  background: rgba(99, 102, 241, 0.08);
 }
 
 .stat-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: var(--radius-md);
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.25);
   color: var(--accent-primary);
   margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4);
 }
 
 .stat-number {
   font-size: 2.2rem;
   font-weight: 800;
   font-family: var(--font-heading);
+  background: linear-gradient(135deg, #ffffff 0%, #9ca3af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .stat-label {
@@ -299,21 +366,22 @@
 }
 
 .tab-btn {
-  padding: 8px 20px;
+  padding: 8px 22px;
   border-radius: var(--radius-full);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-color);
   color: var(--text-muted);
   font-weight: 600;
   font-size: 0.9rem;
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .tab-btn:hover, .tab-btn.active {
   background: var(--accent-gradient);
   color: #fff;
   border-color: transparent;
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
 }
 
 .skills-grid {
@@ -324,11 +392,19 @@
 
 .skill-card {
   padding: 20px;
-  transition: var(--transition);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .skill-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 12px 30px rgba(6, 182, 212, 0.25);
+}
+
+.skill-card:hover .skill-icon {
+  color: var(--accent-secondary);
+  transform: scale(1.2) rotate(6deg);
 }
 
 .skill-header {
@@ -424,20 +500,23 @@
 }
 
 .project-card {
+  position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-glow);
+  transform: translateY(-10px) scale(1.01);
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.25), 0 0 20px rgba(6, 182, 212, 0.15);
 }
 
 .card-image-wrap {
   position: relative;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -445,25 +524,32 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-card:hover .card-img {
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(1deg);
 }
 
 .card-category-badge {
   position: absolute;
   top: 12px;
   right: 12px;
-  padding: 4px 12px;
+  padding: 4px 14px;
   background: rgba(10, 13, 20, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.3);
   border-radius: var(--radius-full);
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--accent-secondary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .card-category-badge {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
 }
 
 .card-content {
